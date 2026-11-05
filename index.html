@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#09090d">
+<title>Kta3Box — Creator Studio</title>
+<style>
+
+:root{color-scheme:dark;--bg:#09090d;--panel:#101117;--panel2:#151720;--line:#252936;--text:#f4f5fb;--muted:#9298aa;--faint:#656c7e;--accent:#a78bfa;--accent2:#70d6ff;--good:#6ee7b7;--bad:#fb7185;--shadow:0 24px 70px #0008}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#292044 0,transparent 42%),var(--bg);color:var(--text);font:14px Inter,ui-sans-serif,system-ui,sans-serif;min-height:100vh}button,input,select{font:inherit}button{cursor:pointer}svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}.hidden{display:none!important}.app{min-height:100vh}.topbar{height:70px;border-bottom:1px solid #ffffff12;background:#09090dcc;backdrop-filter:blur(18px);display:flex;align-items:center;justify-content:space-between;padding:0 34px;position:sticky;top:0;z-index:10}.brand{display:flex;align-items:center;gap:11px;font:700 19px Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:-.7px}.brandmark{width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,#b69aff,#6ad5ff);display:grid;place-items:center;color:#111}.brandmark svg{width:19px;height:19px}.brand small{display:block;color:var(--faint);font:500 9px 'DM Sans';letter-spacing:2px;text-transform:uppercase;margin-top:-2px}.topright{display:flex;align-items:center;gap:14px}.status{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:12px}.dot{width:7px;height:7px;background:var(--good);border-radius:50%;box-shadow:0 0 12px #6ee7b788}.userchip{display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:7px 11px;border-radius:11px;color:var(--muted)}.avatar{width:25px;height:25px;border-radius:8px;background:#30274c;color:#d8caff;display:grid;place-items:center;font-weight:700}.iconbtn{border:1px solid var(--line);background:var(--panel);color:var(--muted);border-radius:10px;width:36px;height:36px;display:grid;place-items:center}.layout{display:grid;grid-template-columns:228px minmax(0,1fr);max-width:1600px;margin:auto;min-height:calc(100vh - 70px)}.sidebar{padding:27px 16px;border-right:1px solid #ffffff0d;display:flex;flex-direction:column;gap:25px}.navlabel{font-size:10px;color:#656c7e;letter-spacing:1.7px;font-weight:700;padding:0 12px}.nav{display:grid;gap:5px}.nav button{border:0;background:transparent;color:var(--muted);display:flex;align-items:center;gap:12px;padding:12px;border-radius:10px;text-align:left;font-weight:600;transition:.2s}.nav button:hover,.nav button.active{background:linear-gradient(90deg,#a78bfa20,#70d6ff08);color:var(--text)}.nav button.active svg{color:var(--accent)}.sidecard{margin-top:auto;padding:15px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,#171527,#11131b)}.sidecard b{font:600 13px Inter,ui-sans-serif,system-ui,sans-serif}.sidecard p{color:var(--muted);font-size:11px;line-height:1.6}.main{padding:34px clamp(18px,3vw,48px) 70px;min-width:0}.pagehead{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:27px}.eyebrow{color:var(--accent);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase}.pagehead h1{font:600 clamp(27px,3vw,38px) Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:-1.4px;margin:7px 0 5px}.pagehead p{color:var(--muted);margin:0;max-width:620px;line-height:1.6}.badge{border:1px solid #a78bfa44;background:#a78bfa12;color:#c8b8ff;border-radius:99px;padding:7px 11px;font-size:11px;white-space:nowrap}.hero-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(230px,.8fr);gap:16px}.panel{background:linear-gradient(145deg,#141620,#101117);border:1px solid var(--line);border-radius:17px;box-shadow:var(--shadow)}.composer{padding:22px}.paneltitle{display:flex;align-items:center;gap:10px;font:600 15px Inter,ui-sans-serif,system-ui,sans-serif;margin-bottom:6px}.paneltitle svg{color:var(--accent)}.sub{color:var(--muted);font-size:12px;line-height:1.6}.fieldlabel{display:block;color:#aeb4c4;font-size:11px;font-weight:700;letter-spacing:.5px;margin:21px 0 8px}.inputrow{display:flex;align-items:center;gap:9px;background:#090b11;border:1px solid #303545;border-radius:12px;padding:5px 6px 5px 13px}.inputrow svg{color:var(--faint)}.inputrow input{background:transparent;border:0;outline:0;color:var(--text);width:100%;padding:10px 2px;min-width:0}.inputrow input::placeholder{color:#5f6678}.gridopts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.control{background:#0c0e14;border:1px solid var(--line);border-radius:11px;padding:11px}.control label{display:block;color:var(--muted);font-size:10px;margin-bottom:7px}.control select{width:100%;border:0;outline:0;background:transparent;color:var(--text);font-size:12px}.control option{background:#111}.toggleline{display:flex;align-items:center;justify-content:space-between;margin-top:15px;color:var(--muted);font-size:12px}.switch{width:38px;height:22px;border:0;border-radius:20px;background:#373b49;padding:3px}.switch:after{content:'';display:block;width:16px;height:16px;border-radius:50%;background:#fff;transition:.2s}.switch.on{background:var(--text)}.switch.on:after{transform:translateX(16px)}.primary{border:0;background:linear-gradient(110deg,#b49aff,#77d8ff);color:#101018;border-radius:11px;padding:13px 18px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:9px;transition:.2s}.primary:hover{filter:brightness(1.08);transform:translateY(-1px)}.primary:disabled{opacity:.45;cursor:not-allowed;transform:none}.wide{width:100%;margin-top:18px}.info-panel{padding:22px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}.info-panel:after{content:'';position:absolute;width:180px;height:180px;border-radius:50%;background:#a78bfa18;filter:blur(45px);right:-50px;top:-50px}.metric{position:relative;z-index:1}.metric strong{font:600 35px Inter,ui-sans-serif,system-ui,sans-serif;display:block;letter-spacing:-1px}.metric span{color:var(--muted);font-size:11px}.mini-bars{display:flex;align-items:end;gap:7px;height:70px;margin-top:22px;position:relative;z-index:1}.mini-bars i{display:block;flex:1;border-radius:5px 5px 2px 2px;background:linear-gradient(0deg,#7658c9,#a78bfa);opacity:.8}.info-foot{display:flex;justify-content:space-between;color:var(--muted);font-size:10px;margin-top:12px;position:relative;z-index:1}.sectionhead{display:flex;justify-content:space-between;align-items:center;margin:30px 0 13px}.sectionhead h2{font:600 17px Inter,ui-sans-serif,system-ui,sans-serif;margin:0}.sectionhead span{color:var(--faint);font-size:11px}.progress-panel{padding:18px 20px;margin-top:16px}.progress-top{display:flex;justify-content:space-between;gap:15px;align-items:center}.progress-track{height:6px;background:#282c38;border-radius:9px;overflow:hidden;margin-top:14px}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,#a78bfa,#70d6ff);transition:width .4s}.result-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.clipcard{overflow:hidden}.thumb{aspect-ratio:9/13;background:#080a10;position:relative}.thumb video{width:100%;height:100%;object-fit:cover}.clipmeta{padding:13px}.clipmeta b{font:600 12px Inter,ui-sans-serif,system-ui,sans-serif}.clipmeta p{color:var(--muted);font-size:10px;margin:6px 0 11px}.clipmeta a{color:#c8b8ff;text-decoration:none;font-size:11px;font-weight:700}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}.tag{border:1px solid #39334f;background:#211b31;color:#cdbfff;padding:6px 9px;border-radius:7px;font-size:10px;cursor:pointer}.schedule{padding:20px;overflow:hidden}.schedule-head{display:flex;justify-content:space-between;align-items:center;gap:12px}.schedule-head b{font:600 14px Inter,ui-sans-serif,system-ui,sans-serif}.timeline{display:grid;grid-template-columns:repeat(7,minmax(70px,1fr));gap:8px;margin-top:20px;overflow-x:auto;padding-bottom:5px}.day{min-width:70px;border:1px solid var(--line);border-radius:10px;padding:10px 8px;background:#0c0e14}.day small{color:var(--muted);font-size:10px}.day strong{display:block;font-size:12px;margin-top:5px}.day .barline{height:45px;border-left:2px solid #383247;margin:10px 0 7px 4px;position:relative}.day .barline:after{content:'';position:absolute;left:-5px;top:12px;width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px #a78bfa}.day em{font-style:normal;color:#c4b5fd;font-size:10px}.history-list{display:grid;gap:9px}.historyitem{display:grid;grid-template-columns:58px minmax(0,1fr) auto;gap:13px;align-items:center;padding:10px;border:1px solid var(--line);border-radius:12px;background:#0d0f15}.historyitem img{width:58px;height:58px;object-fit:cover;border-radius:8px;background:#20222c}.historyitem b{display:block;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.historyitem small{display:block;color:var(--muted);font-size:10px;margin-top:5px}.state{font-size:10px;color:var(--good)}.empty{padding:35px;text-align:center;color:var(--muted);border:1px dashed #343949;border-radius:13px}.empty svg{display:block;margin:0 auto 12px;color:var(--faint);width:28px;height:28px}.view{display:none}.view.active{display:block}.toast{position:fixed;right:20px;bottom:20px;background:#202331;border:1px solid #3a4052;padding:12px 16px;border-radius:11px;box-shadow:var(--shadow);z-index:40;color:var(--text);font-size:12px}.authscreen{min-height:100vh;display:grid;place-items:center;padding:20px;background:radial-gradient(ellipse at 50% 0,#352653 0,transparent 50%),var(--bg)}.authbox{width:min(420px,100%);padding:30px}.authbox .brand{margin-bottom:26px}.authbox h1{font:600 26px Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:-.8px;margin:0 0 7px}.authbox .sub{margin-bottom:20px}.authbox input{width:100%;padding:13px;border-radius:10px;border:1px solid var(--line);background:#0a0c12;color:var(--text);outline:0}.authbox input:focus{border-color:#8e76d0}.authbox .fieldlabel{margin:14px 0 7px}.authswitch{text-align:center;color:var(--muted);font-size:11px;margin-top:17px}.textbtn{background:none;border:0;color:#c8b8ff;font-weight:700}.err{color:var(--bad);font-size:11px;margin-top:10px;min-height:15px}.mobilemenu{display:none}
+@media(max-width:1000px){.layout{grid-template-columns:190px minmax(0,1fr)}.result-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-grid{grid-template-columns:1fr}.info-panel{min-height:180px}.mini-bars{height:45px}}
+@media(max-width:700px){.topbar{height:60px;padding:0 14px}.status{display:none}.layout{display:block;min-height:calc(100vh - 60px)}.sidebar{display:none}.main{padding:23px 14px 50px}.pagehead{align-items:flex-start;flex-direction:column}.gridopts{grid-template-columns:1fr 1fr}.result-grid{grid-template-columns:1fr 1fr}.composer,.info-panel{padding:16px}.topright{gap:7px}.userchip{padding:5px 8px}.brand{font-size:17px}.mobilemenu{display:grid}.timeline{grid-template-columns:repeat(7,78px)}}
+@media(max-width:420px){.result-grid{grid-template-columns:1fr}.gridopts{grid-template-columns:1fr 1fr}.pagehead h1{font-size:27px}}
+
+:root{color-scheme:dark;--bg:#000000;--panel:#0b0b0b;--panel2:#101010;--panel3:#161616;--line:#232323;--line2:#333333;--text:#ffffff;--muted:#9a9a9a;--faint:#6b6b6b;--accent:#ffffff;--accent2:#d4d4d8;--good:#a3a3a3;--bad:#f87171;--button-bg:#ffffff;--button-text:#000000;--hover:rgba(255,255,255,.06);--shadow:0 20px 55px #0008}
+html:not(.dark){color-scheme:light;--bg:#f6f6f7;--panel:#ffffff;--panel2:#fafafa;--panel3:#f4f4f5;--line:#e4e4e7;--line2:#d4d4d8;--text:#18181b;--muted:#71717a;--faint:#a1a1aa;--accent:#18181b;--accent2:#52525b;--good:#52525b;--bad:#dc2626;--button-bg:#18181b;--button-text:#ffffff;--hover:rgba(0,0,0,.04);--shadow:0 18px 45px #0000000c}
+body{background:var(--bg);color:var(--text);transition:background .2s ease,color .2s ease}
+.topbar{background:color-mix(in srgb,var(--bg) 92%,transparent);border-bottom-color:var(--line)}
+.brandmark{background:var(--button-bg);color:var(--button-text)}
+.nav button:hover,.nav button.active{background:var(--hover,rgba(255,255,255,.07));color:var(--text)}
+.nav button.active svg,.eyebrow,.paneltitle svg{color:var(--accent)}
+.panel{background:var(--panel);border-color:var(--line);box-shadow:var(--shadow)}
+.sidecard,.control,.day,.historyitem{background:var(--panel2);border-color:var(--line)}
+.sidecard p,.sub,.pagehead p,.status,.fieldlabel,.control label{color:var(--muted)}
+.inputrow,.control select,.control option{background:var(--panel2);color:var(--text);border-color:var(--line2)}
+.inputrow input{color:var(--text)}
+.iconbtn{background:var(--panel);border-color:var(--line2);color:var(--text)}
+.primary{background:var(--button-bg);color:var(--button-text);box-shadow:none}
+.primary:hover{filter:brightness(.92)}
+.badge{background:var(--panel2);border-color:var(--line2);color:var(--text)}
+.info-panel:after{background:#ffffff0a}
+.mini-bars i{background:linear-gradient(0deg,#525252,#d4d4d4)}
+.progress-track{background:var(--panel3)}
+.progress-fill{background:var(--text)}
+.clipmeta a,.tag,.day em{color:var(--text)}
+.tag{background:var(--panel2);border-color:var(--line2)}
+.day .barline{border-left-color:var(--line2)}
+.day .barline:after{background:var(--text);box-shadow:0 0 0 3px color-mix(in srgb,var(--text) 12%,transparent)}
+.empty{border-color:var(--line2)}
+.toast{background:var(--panel);border-color:var(--line2);color:var(--text)}
+.themebtn{width:40px;height:40px;border-radius:12px}.switch{background:var(--line2)}.switch.on{background:var(--text)}
+.uploadrow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:12px}
+#videoFile{display:none}
+.uploadbtn{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid var(--line2);border-radius:10px;background:var(--panel2);color:var(--text);font-size:12px;font-weight:650;cursor:pointer;transition:.18s}
+.uploadbtn:hover{background:var(--panel3);transform:translateY(-1px)}
+.uploadbtn svg{width:16px;height:16px}
+.uploadhint{font-size:10px;color:var(--faint)}
+html:not(.dark) .topbar{background:#ffffffed}
+html:not(.dark) .status .dot{background:#52525b;box-shadow:none}
+html:not(.dark) .nav button:hover,html:not(.dark) .nav button.active{background:#00000008}
+html:not(.dark) .inputrow{background:#fafafa}
+html:not(.dark) .control select{background:transparent}
+html:not(.dark) .thumb{background:#e4e4e7}
+html:not(.dark) .toast{box-shadow:0 12px 35px #00000012}
+@media(max-width:700px){.topright{gap:10px}.uploadrow{align-items:flex-start;flex-direction:column;gap:7px}}
+
+</style>
+</head>
+<body>
+<div id="app" class="app">
+  <header class="topbar">
+    <div class="brand"><span class="brandmark"><svg viewBox="0 0 24 24"><path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5z"/><path d="m4 7.5 8 4.7 8-4.7M12 12.2V21"/></svg></span><span>Kta3Box<small>CREATOR STUDIO</small></span></div>
+    <div class="topright"><div class="status"><span class="dot"></span> SYSTEM OPERATIONAL</div><button class="iconbtn themebtn" id="themeBtn" type="button" aria-label="Switch to light mode" title="Switch theme"><svg id="themeIcon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button></div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <div><div class="navlabel">WORKSPACE</div><nav class="nav">
+        <button class="active" data-view="studio"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM9 5v14m6-14v14"/></svg> Studio</button>
+        <button data-view="library"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8m-8 4h8"/></svg> Video library</button>
+        <button data-view="planner"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18m-13 4h3m-3 3h7"/></svg> Publish planner</button>
+      </nav></div>
+      <div><div class="navlabel">INFORMATION</div><nav class="nav"><button data-view="about"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-9h.01"/></svg> About Kta3Box</button></nav></div>
+      <div class="sidecard"><b>Make every second count.</b><p>Turn long-form videos into focused vertical highlights, ready for your next publishing slot.</p></div>
+    </aside>
+    <main class="main">
+      <section class="view active" id="view-studio">
+        <div class="pagehead"><div><div class="eyebrow">CREATOR WORKSPACE / 01</div><h1>Make your next moment.</h1><p>Drop a video link. Kta3Box finds high-energy moments, builds vertical clips and prepares your publishing kit.</p></div><span class="badge">AI-ASSISTED WORKFLOW</span></div>
+        <div class="hero-grid">
+          <div class="panel composer">
+            <div class="paneltitle"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7L12 5"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7L12 19"/></svg> Create a new project</div>
+            <p class="sub">Paste a public video link or upload a video file from your device.</p>
+            <label class="fieldlabel">VIDEO SOURCE</label>
+            <div class="inputrow"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7L12 5"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7L12 19"/></svg><input id="url" placeholder="Paste your video URL here" autocomplete="off"><button class="iconbtn" id="paste" title="Paste"><svg viewBox="0 0 24 24"><rect x="8" y="3" width="12" height="16" rx="2"/><path d="M16 3V2H6v16h2"/></svg></button></div>
+            <div class="uploadrow"><label class="uploadbtn" for="videoFile"><svg viewBox="0 0 24 24"><path d="M12 16V4m-4 4 4-4 4 4M4 16v4h16v-4"/></svg><span id="uploadLabel">Upload video file</span></label><input id="videoFile" type="file" accept="video/mp4,video/quicktime,video/x-matroska,video/webm,video/x-m4v,.mp4,.mov,.mkv,.webm,.m4v,.avi"><span class="uploadhint">MP4, MOV, MKV, WEBM · max 600 MB</span></div>
+            <div class="gridopts">
+              <div class="control"><label>DESTINATION</label><select id="platform"><option value="youtube">YouTube Shorts</option><option value="tiktok">TikTok</option><option value="instagram">Instagram Reels</option></select></div>
+              <div class="control"><label>NUMBER OF CLIPS</label><select id="count"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option></select></div>
+              <div class="control"><label>CLIP LENGTH</label><select id="duration"><option value="15">15 seconds</option><option value="20">20 seconds</option><option value="30" selected>30 seconds</option><option value="45">45 seconds</option><option value="60">60 seconds</option></select></div>
+            </div>
+            <div class="toggleline"><span>Opening impact sound</span><button class="switch on" id="sound" aria-label="Toggle opening sound"></button></div>
+            <button class="primary wide" id="create"><svg viewBox="0 0 24 24"><path d="m5 3 15 9-15 9z"/></svg> Generate highlights</button>
+            <p class="sub" style="text-align:center;margin-top:11px;font-size:10px">Only process videos you own or have permission to use.</p>
+          </div>
+          <div class="panel info-panel">
+            <div class="metric"><div class="eyebrow">YOUR CREATOR ENGINE</div><strong>One link.<br>More moments.</strong><span>From source video to a ready-to-post content kit.</span></div>
+            <div class="mini-bars"><i style="height:25%"></i><i style="height:42%"></i><i style="height:32%"></i><i style="height:67%"></i><i style="height:48%"></i><i style="height:82%"></i><i style="height:57%"></i><i style="height:100%"></i><i style="height:74%"></i><i style="height:91%"></i><i style="height:62%"></i><i style="height:86%"></i></div>
+            <div class="info-foot"><span>HIGHLIGHT DETECTION</span><span>VERTICAL 9:16</span></div>
+          </div>
+        </div>
+        <div class="panel progress-panel hidden" id="progress">
+          <div class="progress-top"><div><b id="progressTitle">Preparing your project</b><div class="sub" id="progressText">Waiting for worker...</div></div><strong id="progressPct">0%</strong></div>
+          <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+          <div class="err" id="jobError"></div>
+        </div>
+        <div id="output" class="hidden">
+          <div class="sectionhead"><h2>Your highlights</h2><span id="outputMeta"></span></div>
+          <div class="result-grid" id="clips"></div>
+          <div class="panel composer" style="margin-top:15px"><div class="paneltitle"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h13"/><path d="m17 14 3 3-3 3"/></svg> Publishing kit</div><p class="sub">Suggested tags based on source metadata and platform. Check them against your niche before posting.</p><div class="tags" id="tags"></div></div>
+          <div class="panel schedule" style="margin-top:15px"><div class="schedule-head"><b>Suggested publishing windows</b><span class="badge">STARTING POINTS</span></div><div class="sub" id="scheduleNote" style="margin-top:5px"></div><div class="timeline" id="schedule"></div></div>
+        </div>
+      </section>
+      <section class="view" id="view-library">
+        <div class="pagehead"><div><div class="eyebrow">YOUR CONTENT / 02</div><h1>Video library.</h1><p>Every project you have processed, collected in one place.</p></div></div>
+        <div class="history-list" id="history"></div>
+      </section>
+      <section class="view" id="view-planner">
+        <div class="pagehead"><div><div class="eyebrow">PUBLISHING RHYTHM / 03</div><h1>Plan the next drop.</h1><p>A weekly visual timeline with suggested publishing windows. The chart is a planning guide, not a live platform analytics feed.</p></div></div>
+        <div class="panel schedule"><div class="schedule-head"><b>Weekly publishing timeline</b><span class="badge">AUDIENCE LOCAL TIME</span></div><p class="sub">Use your own account analytics to refine these windows. Kta3Box does not publish automatically.</p><div class="timeline" id="plannerTimeline"></div></div>
+        <div class="panel composer" style="margin-top:16px"><div class="paneltitle">Publishing checklist</div><div class="sub">A strong opening, a clear title, relevant tags and a consistent schedule help make a clip easier to discover. Results are never guaranteed.</div></div>
+      </section>
+      <section class="view" id="view-about">
+        <div class="pagehead"><div><div class="eyebrow">THE PRODUCT / 04</div><h1>Built for the first second.</h1><p>Kta3Box is a creator workflow that turns a long video into selected vertical moments and a practical publishing plan.</p></div></div>
+        <div class="hero-grid">
+          <div class="panel composer"><div class="paneltitle">What Kta3Box does</div><p class="sub">It downloads a supported source, analyzes audio intensity and visual scene changes to estimate engaging moments, then renders vertical 9:16 clips with an optional opening impact sound. It also prepares topic and platform hashtags plus suggested posting windows.</p></div>
+          <div class="panel composer"><div class="paneltitle">Creator-first by design</div><p class="sub">A focused interface, saved project history, responsive workspace and a simple publishing timeline. No subtitle translation or voice dubbing workflow.</p></div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+<div id="toast" class="toast hidden"></div>
+<script>
+const $=id=>document.getElementById(id);
+let currentJob=null, poller=null, soundOn=true, lastSchedule=null;
+async function api(path,options={}){const headers={...(options.headers||{})};if(!(options.body instanceof FormData))headers["Content-Type"]="application/json";const r=await fetch(path,{credentials:"same-origin",headers,...options});const d=await r.json().catch(()=>({}));if(!r.ok)throw new Error(d.error||"Request failed");return d}
+function toast(message){$("toast").textContent=message;$("toast").classList.remove("hidden");setTimeout(()=>$("toast").classList.add("hidden"),3000)}
+const root=document.documentElement;
+function applyTheme(theme){const dark=theme!=="light";root.classList.toggle("dark",dark);localStorage.setItem("kta3box_theme",dark?"dark":"light");document.querySelector('meta[name="theme-color"]').content=dark?"#000000":"#f6f6f7";$("themeBtn").setAttribute("aria-label",dark?"Switch to light mode":"Switch to dark mode");$("themeBtn").title=dark?"Switch to light mode":"Switch to dark mode";$("themeIcon").innerHTML=dark?'<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>':'<path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5 8.5 8.5 0 1 0 20.5 15.5Z"/>'}
+applyTheme(localStorage.getItem("kta3box_theme")||"dark");
+$("themeBtn").addEventListener("click",()=>applyTheme(root.classList.contains("dark")?"light":"dark"));
+function boot(){loadHistory();renderPlanner()}
+document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>{document.querySelectorAll(".nav button").forEach(x=>x.classList.toggle("active",x===b));document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id==="view-"+b.dataset.view));if(b.dataset.view==="library")loadHistory();if(b.dataset.view==="planner")renderPlanner()});
+$("sound").onclick=()=>{soundOn=!soundOn;$("sound").classList.toggle("on",soundOn)};
+$("paste").onclick=async()=>{try{$("url").value=await navigator.clipboard.readText()}catch(e){toast("Clipboard permission is unavailable.")}};
+$("videoFile").addEventListener("change",()=>{$("uploadLabel").textContent=$("videoFile").files[0]?.name||"Upload video file"});
+$("create").onclick=async()=>{const url=$("url").value.trim();const file=$("videoFile").files[0];if(!url&&!file){toast("Paste a video link or upload a video file first.");return}$("create").disabled=true;$("progress").classList.remove("hidden");$("output").classList.add("hidden");$("jobError").textContent="";$("progressPct").textContent="2%";$("progressFill").style.width="2%";try{let body;if(file){body=new FormData();body.append("video",file);body.append("platform",$("platform").value);body.append("count",$("count").value);body.append("duration",$("duration").value);body.append("sound",String(soundOn))}else{body=JSON.stringify({url,platform:$("platform").value,count:$("count").value,duration:$("duration").value,sound:soundOn})}const d=await api("/api/create",{method:"POST",body});currentJob=d.id;pollJob()}catch(e){$("jobError").textContent=e.message;$("create").disabled=false}};
+async function pollJob(){clearInterval(poller);const tick=async()=>{try{const d=await api("/api/status/"+currentJob);$("progressTitle").textContent=d.title||"Processing your video";$("progressText").textContent=d.message||d.stage;$("progressPct").textContent=(d.progress||0)+"%";$("progressFill").style.width=(d.progress||0)+"%";if(d.status==="error"||d.stage==="error"){$("jobError").textContent=d.error||"Processing failed";$("create").disabled=false;clearInterval(poller)}if(d.stage==="done"){clearInterval(poller);$("create").disabled=false;renderOutput(d);loadHistory()}}catch(e){$("jobError").textContent=e.message;clearInterval(poller);$("create").disabled=false}};await tick();poller=setInterval(tick,1800)}
+function renderOutput(d){$("output").classList.remove("hidden");$("outputMeta").textContent=(d.clips||[]).length+" clips · "+(d.title||"Video");$("clips").innerHTML=(d.clips||[]).map((c,i)=>`<article class="panel clipcard"><div class="thumb"><video controls playsinline preload="metadata" src="${c.url}"></video></div><div class="clipmeta"><b>Highlight ${String(i+1).padStart(2,"0")}</b><p>${formatTime(c.start)} — ${formatTime(c.end)}</p><a href="${c.download}">DOWNLOAD CLIP ↗</a></div></article>`).join("");$("tags").innerHTML=(d.hashtags||[]).map(t=>`<button class="tag" data-tag="${escapeHtml(t)}">${escapeHtml(t)}</button>`).join("")||'<span class="sub">No tags were available.</span>';document.querySelectorAll("[data-tag]").forEach(b=>b.onclick=()=>navigator.clipboard.writeText(b.dataset.tag).then(()=>toast("Hashtag copied")));lastSchedule=d.schedule;renderSchedule(d.schedule,$("schedule"));$("scheduleNote").textContent=d.schedule?.note||"Suggested posting windows."}
+function formatTime(s){s=Number(s)||0;return Math.floor(s/60)+":"+String(Math.floor(s%60)).padStart(2,"0")}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function renderSchedule(data,el){const slots=data?.slots||[["Tuesday","17:00–19:00"],["Thursday","17:00–20:00"],["Saturday","10:00–12:00"]];const days=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];el.innerHTML=days.map(day=>{const slot=slots.find(x=>x[0].startsWith(day));return `<div class="day"><small>${day}</small><div class="barline"></div><strong>${slot?slot[1]:"—"}</strong><em>${slot?"Suggested":"Open slot"}</em></div>`}).join("")}
+function renderPlanner(){renderSchedule(lastSchedule,$("plannerTimeline"))}
+async function loadHistory(){try{const d=await api("/api/history");const items=d.items||[];$("history").innerHTML=items.length?items.map(x=>`<div class="historyitem"><img src="${escapeHtml(x.thumbnail||"")}" onerror="this.style.opacity=.15"><div><b>${escapeHtml(x.title||"Untitled project")}</b><small>${escapeHtml(x.platform)} · ${new Date(x.created_at).toLocaleString()} · ${x.clips.length} clips</small></div><span class="state">${x.status==="done"?"READY":escapeHtml(x.status.toUpperCase())}</span></div>`).join(""):'<div class="empty"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8m-8 4h8"/></svg>Your project library is empty. Create your first highlight to see it here.</div>'}catch(e){}}
+boot();
+</script>
+</body>
+</html>
